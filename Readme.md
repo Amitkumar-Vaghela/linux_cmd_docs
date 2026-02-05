@@ -1,5 +1,186 @@
 # Linux & DevOps Commands – Real-Time Production Documentation
 
+## Basic Linux Commands (Beginner Guide)
+
+This document lists **basic Linux commands (30 commands)** every beginner should learn first.  
+Commands are explained in **simple language** with **examples and real meaning**.
+
+---
+
+1. pwd
+**Purpose:** Show current working directory
+
+```bash
+pwd
+```
+
+2. ls
+Purpose: List files and directories
+```
+ls
+ls -l
+ls -a
+```
+
+3. cd
+Purpose: Change directory
+```
+cd /var/log
+cd ..
+```
+
+4. mkdir
+Purpose: Create a directory
+```
+mkdir myfolder
+```
+
+5. rmdir
+Purpose: Remove an empty directory
+```
+rmdir myfolder
+```
+
+6. touch
+Purpose: Create an empty file
+```touch file.txt
+```
+
+7. rm
+Purpose: Remove files or directories
+```
+rm file.txt
+rm -r foldername
+```
+
+8. cp
+Purpose: Copy files
+```
+cp file1.txt file2.txt
+```
+
+9. mv
+Purpose: Move or rename files
+```
+mv old.txt new.txt
+```
+
+10. cat
+Purpose: Display file contents
+```
+cat file.txt
+```
+11. less
+Purpose: View large files page by page
+```
+less file.txt
+```
+Press q to quit.
+
+
+12. head
+Purpose: Display first lines of a file
+```
+head file.txt
+```
+
+13. tail
+Purpose: Display last lines of a file
+```
+tail file.txt
+tail -f app.log
+```
+
+14. whoami
+Purpose: Show current user
+```
+whoami
+```
+
+15. uname
+Purpose: System information
+```
+uname -a
+```
+16. df
+Purpose: Disk usage
+```
+df -h
+```
+17. du
+Purpose: Directory size
+```
+du -sh *
+```
+18. free
+Purpose: Memory usage
+```
+free -m
+```
+19. top
+Purpose: Real-time system monitoring
+```
+top
+```
+20. ps
+Purpose: Show running processes
+```
+ps -ef
+```
+21. kill
+Purpose: Terminate a process
+```
+kill PID
+```
+22. chmod
+Purpose: Change file permissions
+```
+chmod 755 script.sh
+```
+
+23. chown
+Purpose: Change file ownership
+```
+chown user file.txt
+```
+24. ping
+Purpose: Test network connectivity
+```
+ping google.com
+```
+25. ip a
+Purpose: Display IP address
+```
+ip a
+```
+26. history
+Purpose: Show command history
+```
+history
+```
+
+27. clear
+Purpose: Clear the terminal screen
+```
+clear
+```
+28. man
+Purpose: Show command manual
+```
+man ls
+```
+29. echo
+Purpose: Print text or variables
+```
+echo "Hello Linux"
+```
+30. exit
+Purpose: Exit the terminal session
+```
+exit
+```
+
+
 This document explains **Linux commands and LVM storage management** exactly as used by **DevOps engineers in real production environments**, including **multi-disk LVM**, **mounting**, and **daily operational commands**.
 
 ---
