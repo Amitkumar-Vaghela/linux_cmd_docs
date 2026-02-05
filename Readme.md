@@ -118,3 +118,145 @@ DevOps Scenario:
 Ensure application storage survives server reboot.
 
 SECTION 2: USER & GROUP MANAGEMENT
+sudo
+```
+sudo systemctl restart nginx
+```
+
+Scenario: Secure admin access in production.
+
+useradd / userdel
+```
+useradd devuser
+userdel devuser
+```
+
+Scenario: Onboarding and offboarding engineers.
+
+groupadd / gpasswd
+```
+groupadd devops
+gpasswd -a devuser devops
+```
+Scenario: Grant Docker, Jenkins, or sudo access.
+
+SECTION 3: FILE PERMISSIONS
+```
+ls -l
+ls -l
+```
+
+chmod
+```
+chmod 755 deploy.sh
+```
+
+
+Scenario: Make CI/CD scripts executable.
+
+chown / chgrp
+```
+chown devuser:devops app.log
+```
+
+Scenario: Fix permission issues in production apps.
+
+umask
+```
+umask
+```
+Scenario: Secure default file permissions.
+
+
+SECTION 4: FILE TRANSFER & COMPRESSION
+scp
+```
+scp app.conf ec2-user@server:/etc/app/
+```
+
+Scenario: Copy configs to EC2.
+rsync
+```
+rsync -av app/ /var/www/app/
+```
+
+Scenario: Zero-downtime application sync.
+zip / gzip / tar
+```
+tar -cvf logs.tar /var/log
+gzip logs.tar
+```
+
+Scenario: Compress logs before backup.
+
+SECTION 5: NETWORKING & TROUBLESHOOTING
+ifconfig / ip a
+```
+ip a
+```
+Scenario: EC2 instance not reachable.
+
+ping
+```
+ping google.com
+```
+
+traceroute / tracepath / mtr
+```
+mtr google.com
+```
+
+
+Scenario: Detect network latency or packet loss.
+
+
+nslookup
+```
+nslookup example.com
+```
+
+Scenario: Debug DNS issues.
+
+telnet
+```
+telnet localhost 8080
+```
+
+Scenario: Check if application port is open.
+
+curl vs wget
+```
+curl http://localhost:8080
+wget http://example.com/file.tar
+```
+
+Tool	Use
+curl	API testing
+wget	File download
+
+
+SECTION 6: PROCESS & SYSTEM MONITORING
+ps
+```
+ps -ef
+```
+
+top
+```
+top
+```
+kill
+```
+kill -9 PID
+```
+
+Scenario: Kill hung processes during outages.
+
+df / du / free / uptime
+```
+df -h
+free -m
+```
+
+
+Scenario: Check system health before deployment.
